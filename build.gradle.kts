@@ -34,6 +34,7 @@ val sourcesJar by tasks.registering(Jar::class) {
 publishing {
     repositories {
         maven {
+
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/joaophi/YeelightApi")
             credentials {
@@ -44,6 +45,7 @@ publishing {
     }
     publications {
         register("mavenJava", MavenPublication::class) {
+            artifactId = "yeelight"
             from(components["java"])
             artifact(sourcesJar.get())
         }
