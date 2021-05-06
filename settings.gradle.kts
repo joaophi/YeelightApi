@@ -1,1 +1,1 @@
-rootProject.name = "YeelightApi"
+rootProject.name = "yeelight"
