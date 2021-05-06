@@ -1,8 +1,8 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.4.32"
-    kotlin("kapt") version "1.4.32"
+    kotlin("jvm") version "1.5.0"
+    kotlin("kapt") version "1.5.0"
     id("maven-publish")
 }
 
@@ -23,7 +23,7 @@ dependencies {
 }
 
 tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "11"
+    kotlinOptions.jvmTarget = "1.8"
 }
 
 val sourcesJar by tasks.registering(Jar::class) {
