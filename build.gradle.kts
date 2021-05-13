@@ -14,12 +14,20 @@ repositories {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0-RC")
 
     implementation("com.squareup.okio:okio:2.10.0")
 
     implementation("com.squareup.moshi:moshi-kotlin:1.12.0")
     kapt("com.squareup.moshi:moshi-kotlin-codegen:1.12.0")
+
+    testImplementation("org.junit.jupiter:junit-jupiter:5.7.1")
+    testImplementation("com.google.truth:truth:1.1.2")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.5.0-RC")
+}
+
+tasks.withType<Test> {
+    useJUnitPlatform()
 }
 
 tasks.withType<KotlinCompile> {
